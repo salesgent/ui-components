@@ -37,11 +37,38 @@ const Template = ({ showMoreProducts = false, ...props }) => {
     alert('login pressed');
   };
 
+  const {
+    rowSpace,
+    colSpace,
+    imageSize,
+    imageBottomSpace,
+    titleBottomSpace,
+    titleLineClamp,
+    detailBottomSpace,
+    showBoxShadow,
+    showQuickActions,
+    backgroundColor,
+    ...restProps
+  } = props;
+
+  const layoutModel = getLayoutModel({
+    rowSpace,
+    colSpace,
+    imageSize,
+    imageBottomSpace,
+    titleBottomSpace,
+    titleLineClamp,
+    detailBottomSpace,
+    showBoxShadow,
+    showQuickActions,
+    backgroundColor,
+  });
+
   return (
     <ProductSlider
       items={showMoreProducts ? productsForSliders : products}
-      {...props}
-      layoutModel={getLayoutModel(props)}
+      {...restProps}
+      layoutModel={layoutModel}
       colCount={listToShow}
       addToCart={addToCart}
       onNotifyClick={onNotifyClick}
@@ -58,6 +85,10 @@ export default {
   title: 'Molecules/ProductSlider/one',
   component: Product,
   argTypes: {
+    variant: {
+      defaultValue: 'one',
+      control: { type: 'select', options: ['none', 'one'] },
+    },
     colCount: {
       defaultValue: 3,
       control: { type: 'inline-radio', options: [1, 2, 3, 4, 6] },
@@ -78,6 +109,14 @@ export default {
       defaultValue: 15,
       control: { type: 'range', min: 0, max: 50 },
     },
+    titleLineClamp: {
+      defaultValue: 2,
+      control: {
+        type: 'range',
+        min: 1,
+        max: 5,
+      },
+    },
     titleBottomSpace: {
       defaultValue: 10,
       control: { type: 'range', min: 0, max: 50 },
@@ -86,7 +125,20 @@ export default {
       defaultValue: 1,
       control: { type: 'range', min: 0, max: 50 },
     },
+    backgroundColor: { control: 'color', defaultValue: '#FFFFFF' },
     showMoreProducts: {
+      defaultValue: false,
+      control: { type: 'boolean' },
+    },
+    showBoxShadow: {
+      defaultValue: true,
+      control: { type: 'boolean' },
+    },
+    showLogin: {
+      defaultValue: false,
+      control: { type: 'boolean' },
+    },
+    showQuickActions: {
       defaultValue: false,
       control: { type: 'boolean' },
     },

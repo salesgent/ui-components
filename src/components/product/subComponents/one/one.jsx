@@ -1,32 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Button } from 'antd';
 import {
   AddToCartContainer,
-  StyledLoginView,
   StyledOne,
   StyledOutOfStock,
   StyledPrice,
   StyledStockBG,
 } from './styled/one.styled';
-import { ShoppingCartOutlined } from '@ant-design/icons';
 import QtyMeter from './QtyMeter';
 import { ProductContext } from '../../product';
 import NotifyMe from './NotifyMe';
-
-const AddToCartButton = ({ onClick }) => (
-  <Button danger type="primary" onClick={onClick}>
-    <ShoppingCartOutlined />
-  </Button>
-);
-
-const LoginView = ({ onClick }) => (
-  <StyledLoginView>
-    <Button type="link" danger onClick={onClick}>
-      Login
-    </Button>
-    to view price.
-  </StyledLoginView>
-);
+import { AddToCartButton } from './AddToCartButton';
+import { LoginView } from './LoginView';
 
 const One = () => {
   const {

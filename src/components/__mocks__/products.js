@@ -7,7 +7,8 @@ const defaultProducts = [lessThenFifty, outOfStock, moreThenFifty];
 const Product = (modifyEntries = {}) => ({
   id: 1,
   imgUrl: 'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-  title: 'iPhone 11 Pro Hard OLED Assembly (AM5) (OLED Breakage Warranty)',
+  title:
+    'iPad Air 2 / iPad Air 3 / iPad Mini 4 / iPad Pro 12.9 1st Gen / iPad Pro 10.5 Front Camera Flex Cable',
   description: 'SKU: S-180A1-MAT',
   price: 100,
   currency: '$',
