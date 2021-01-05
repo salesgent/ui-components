@@ -32,6 +32,8 @@
     <list default="true" id="afc35ea4-ed07-4c1b-8df2-5d5ba4fbcfde" name="Default Changelist" comment="Refactored Product mock data generator">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.stories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.stories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/productSlider/productSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/productSlider/productSlider.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +52,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="sc-task/new-changes" />
+                    <option name="lastUsedInstant" value="1609859436" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="sc-task/product-component" />
+                    <option name="lastUsedInstant" value="1609859435" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -87,6 +112,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.storybook">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -139,6 +175,8 @@
       <workItem from="1609515780888" duration="4177000" />
       <workItem from="1609558996893" duration="12238000" />
       <workItem from="1609688702689" duration="1844000" />
+      <workItem from="1609950683620" duration="642000" />
+      <workItem from="1610032566032" duration="6218000" />
     </task>
     <task id="LOCAL-00001" summary="config">
       <created>1608787188903</created>
@@ -364,7 +402,42 @@
       <option name="project" value="LOCAL" />
       <updated>1609690763796</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Background color from modal.">
+      <created>1609860122778</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1609860122778</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Line to show for product title">
+      <created>1609864904712</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1609864904713</updated>
+    </task>
+    <task id="LOCAL-00035" summary="quick action">
+      <created>1610039530144</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1610039530144</updated>
+    </task>
+    <task id="LOCAL-00036" summary="export components and removed styles.">
+      <created>1610124952376</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610124952376</updated>
+    </task>
+    <task id="LOCAL-00037" summary="updated storybook">
+      <created>1610162901083</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1610162901083</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,12 +468,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Show Login view" />
-    <MESSAGE value="setup prettier." />
-    <MESSAGE value="workspace" />
-    <MESSAGE value="grid system to load components" />
-    <MESSAGE value="updated grid selections" />
-    <MESSAGE value="created hooks for:&#10;- window resize&#10;- gird size&#10;&#10;created function to get product to show based on the window size&#10;&#10;working on to show responsive layout based on selection and window resize both" />
     <MESSAGE value="create Breakpoint constant." />
     <MESSAGE value="create ProductHelper" />
     <MESSAGE value="refactor with Constants and Helper class." />
@@ -420,7 +487,13 @@
     <MESSAGE value="responsive for qty meter" />
     <MESSAGE value="workspace files" />
     <MESSAGE value="added comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comment" />
+    <MESSAGE value="Box shadow based on prop." />
+    <MESSAGE value="Background color from modal." />
+    <MESSAGE value="Line to show for product title" />
+    <MESSAGE value="quick action" />
+    <MESSAGE value="export components and removed styles." />
+    <MESSAGE value="updated storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated storybook" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

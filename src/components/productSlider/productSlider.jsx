@@ -10,16 +10,26 @@ export const getLayoutModel = ({
   imageSize = 100,
   imageBottomSpace = 15,
   titleBottomSpace = 10,
+  titleLineClamp = 2,
   detailBottomSpace = 0,
+  showBoxShadow = true,
+  showQuickActions = false,
+  backgroundColor = 'white',
+  variant = 'one',
 } = {}) => {
   return {
     rowSpace, // px
     colSpace, // px
+    showBoxShadow,
+    backgroundColor,
+    showQuickActions,
+    variant,
     image: {
       size: imageSize, // in percentage.
       mb: imageBottomSpace,
     },
     title: {
+      lineCamp: titleLineClamp,
       mb: titleBottomSpace, // px
     },
     detail: {
@@ -41,24 +51,34 @@ const ProductSlider = (props = {}) => {
   const newProps = { ...defaultProps, ...props };
   const { colCount, items, ...restProps } = newProps;
 
-  const { colSpace, rowSpace } = restProps.layoutModel;
+  const {
+    colSpace,
+    rowSpace,
+    showBoxShadow,
+    backgroundColor,
+    variant,
+  } = restProps.layoutModel;
 
   const commonProps = {
-    variant: 'one',
+    variant,
     colValues: 24 / colCount,
+    showBoxShadow,
     ...restProps,
   };
 
   const products = items.map((item) => (
     <Product item={item} {...commonProps} key={item.id} />
   ));
-  products.push(
-    <Product item={items[0]} {...commonProps} showLogin key="login" />
-  );
+  products.push(<Product item={items[0]} {...commonProps} key="login" />);
 
   return (
     <>
-      <Row gutter={[colSpace, rowSpace]}>{products}</Row>
+      <Row
+        gutter={[colSpace, rowSpace]}
+        style={{ background: backgroundColor }}
+      >
+        {products}
+      </Row>
     </>
   );
 };
