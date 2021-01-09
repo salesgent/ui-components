@@ -37,7 +37,7 @@ const One = () => {
 
   const renderSubModules = () => {
     return (
-      <>
+      <React.Fragment>
         <StyledPrice>{amount}</StyledPrice>
         <StyledStockBG>{stockTitle}</StyledStockBG>
         {isProductOutOfStock && <NotifyMe />}
@@ -47,7 +47,7 @@ const One = () => {
             <AddToCartButton onClick={handleAddToCart} />
           </AddToCartContainer>
         )}
-      </>
+      </React.Fragment>
     );
   };
 

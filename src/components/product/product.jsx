@@ -47,10 +47,10 @@ const Product = (props) => {
           showBoxShadow={showBoxShadow}
           layout={layoutModel}
           cover={
-            <>
+            <React.Fragment>
               {showQuickAction && <QuickAction>{c.quickAction}</QuickAction>}
               <img alt="example" src={imgUrl} />
-            </>
+            </React.Fragment>
           }
         >
           <Meta title={title} description={description} />
