@@ -1,8 +1,8 @@
-import React from 'react';
-import { Row } from 'antd';
-import Product from '../product/product';
+import * as React from 'react'
+import { Row } from 'antd'
+import Product from '../product/product'
 
-const noop = () => {};
+const noop = () => {}
 
 export const getLayoutModel = ({
   rowSpace = 8,
@@ -15,7 +15,7 @@ export const getLayoutModel = ({
   showBoxShadow = true,
   showQuickActions = false,
   backgroundColor = 'white',
-  variant = 'one',
+  variant = 'one'
 } = {}) => {
   return {
     rowSpace, // px
@@ -26,17 +26,17 @@ export const getLayoutModel = ({
     variant,
     image: {
       size: imageSize, // in percentage.
-      mb: imageBottomSpace,
+      mb: imageBottomSpace
     },
     title: {
       lineCamp: titleLineClamp,
-      mb: titleBottomSpace, // px
+      mb: titleBottomSpace // px
     },
     detail: {
-      mb: detailBottomSpace, // px
-    },
-  };
-};
+      mb: detailBottomSpace // px
+    }
+  }
+}
 
 const defaultProps = {
   items: [],
@@ -44,43 +44,38 @@ const defaultProps = {
   colCount: 3,
   onLoginClick: noop,
   onNotifyClick: noop,
-  addToCart: noop,
-};
+  addToCart: noop
+}
 
 const ProductSlider = (props = {}) => {
-  const newProps = { ...defaultProps, ...props };
-  const { colCount, items, ...restProps } = newProps;
+  const newProps = { ...defaultProps, ...props }
+  const { colCount, items, ...restProps } = newProps
 
   const {
     colSpace,
     rowSpace,
     showBoxShadow,
     backgroundColor,
-    variant,
-  } = restProps.layoutModel;
+    variant
+  } = restProps.layoutModel
 
   const commonProps = {
     variant,
     colValues: 24 / colCount,
     showBoxShadow,
-    ...restProps,
-  };
+    ...restProps
+  }
 
   const products = items.map((item) => (
     <Product item={item} {...commonProps} key={item.id} />
-  ));
-  products.push(<Product item={items[0]} {...commonProps} key="login" />);
+  ))
+  products.push(<Product item={items[0]} {...commonProps} key='login' />)
 
   return (
-    <>
-      <Row
-        gutter={[colSpace, rowSpace]}
-        style={{ background: backgroundColor }}
-      >
-        {products}
-      </Row>
-    </>
-  );
-};
+    <Row gutter={[colSpace, rowSpace]} style={{ background: backgroundColor }}>
+      {products}
+    </Row>
+  )
+}
 
-export default ProductSlider;
+export default ProductSlider
