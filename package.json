@@ -1,7 +1,7 @@
 {
-  "name": "ui-components",
+  "name": "@salesgenterp/ui-components",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@ant-design/icons": "^4.3.0",
     "@testing-library/jest-dom": "^5.11.4",
