@@ -3,139 +3,235 @@ import 'antd/dist/antd.css';
 import { Input, Button, Card, Col, Row } from 'antd';
 import styled from 'styled-components';
 
-let _ = t => t,
-    _t,
-    _t2,
-    _t3,
-    _t4,
-    _t5,
-    _t6,
-    _t7,
-    _t8,
-    _t9,
-    _t10,
-    _t11,
-    _t12;
-const StyledOne = styled.div(_t || (_t = _`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
 
-  > div:not(:last-child) {
-    margin-bottom: 10px;
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
   }
-`));
-const StyledPrice = styled.div(_t2 || (_t2 = _`
-  color: red;
-  font-weight: bold;
-`));
-const StyledOutOfStock = styled.div(_t3 || (_t3 = _`
-  color: red;
-  font-weight: 500;
-`));
-const StyledStockBG = styled.div(_t4 || (_t4 = _`
-  background-color: lightgray;
-  padding: 3px 5px;
-  min-width: 70px;
-  border-radius: 3px;
-  font-size: 10px;
-  font-weight: 500;
-`));
-const StyledUpdateQty = styled.div(_t5 || (_t5 = _`
-  display: flex;
-  column-gap: 5px;
 
-  input {
-    width: 50px;
+  return target;
+}
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
   }
-`));
-const StyledNumberInput = styled(Input)(_t6 || (_t6 = _`
-  text-align: center;
-`));
-const StyledFlex = styled.div(_t7 || (_t7 = _`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`));
-const AddToCartContainer = styled(StyledFlex)(_t8 || (_t8 = _``));
-const StyledNotifyMe = styled(StyledFlex)(_t9 || (_t9 = _``));
-const StyledNotifyButton = styled(Button)(_t10 || (_t10 = _`
-  margin-left: 15px;
-`));
-const StyledProductCounter = styled.div(_t11 || (_t11 = _`
-  background: red;
-  height: 30px;
-  width: 30px;
 
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 50%;
-`));
-const StyledLoginView = styled.div(_t12 || (_t12 = _`
-  text-transform: uppercase;
-  button {
-    padding: 0;
-    margin-right: 5px;
-    text-transform: uppercase;
-  }
-`));
+  strings.raw = raw;
+  return strings;
+}
 
-const ProductCounter = ({
-  qty
-}) => {
-  const hasQty = qty > 0;
+function _templateObject12() {
+  var data = _taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  button {\n    padding: 0;\n    margin-right: 5px;\n    text-transform: uppercase;\n  }\n"]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteralLoose(["\n  background: red;\n  height: 30px;\n  width: 30px;\n\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  border-radius: 50%;\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteralLoose(["\n  margin-left: 15px;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteralLoose([""]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteralLoose([""]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteralLoose(["\n  text-align: center;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  column-gap: 5px;\n\n  input {\n    width: 50px;\n  }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteralLoose(["\n  background-color: lightgray;\n  padding: 3px 5px;\n  min-width: 70px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: 500;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteralLoose(["\n  color: red;\n  font-weight: 500;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose(["\n  color: red;\n  font-weight: bold;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  > div:not(:last-child) {\n    margin-bottom: 10px;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var StyledOne = styled.div(_templateObject());
+var StyledPrice = styled.div(_templateObject2());
+var StyledOutOfStock = styled.div(_templateObject3());
+var StyledStockBG = styled.div(_templateObject4());
+var StyledUpdateQty = styled.div(_templateObject5());
+var StyledNumberInput = styled(Input)(_templateObject6());
+var StyledFlex = styled.div(_templateObject7());
+var AddToCartContainer = styled(StyledFlex)(_templateObject8());
+var StyledNotifyMe = styled(StyledFlex)(_templateObject9());
+var StyledNotifyButton = styled(Button)(_templateObject10());
+var StyledProductCounter = styled.div(_templateObject11());
+var StyledLoginView = styled.div(_templateObject12());
+
+var ProductCounter = function ProductCounter(_ref) {
+  var qty = _ref.qty;
+  var hasQty = qty > 0;
   return hasQty && /*#__PURE__*/React__default.createElement(StyledProductCounter, null, qty);
 };
 
-const QtyMeter = ({
-  defaultQty: _defaultQty = 0,
-  updatedQty
-}) => {
-  const [qtyToBuy, setQtyToBuy] = useState(_defaultQty);
-  const [showInput, setShowInput] = useState(true);
-  const containerRef = useRef(null);
-  useEffect(() => {
-    const onResize = () => {
-      const {
-        width
-      } = containerRef.current.closest('.ant-card').getBoundingClientRect();
+var QtyMeter = function QtyMeter(_ref2) {
+  var _ref2$defaultQty = _ref2.defaultQty,
+      defaultQty = _ref2$defaultQty === void 0 ? 0 : _ref2$defaultQty,
+      updatedQty = _ref2.updatedQty;
+
+  var _useState = useState(defaultQty),
+      qtyToBuy = _useState[0],
+      setQtyToBuy = _useState[1];
+
+  var _useState2 = useState(true),
+      showInput = _useState2[0],
+      setShowInput = _useState2[1];
+
+  var containerRef = useRef(null);
+  useEffect(function () {
+    var onResize = function onResize() {
+      var _containerRef$current = containerRef.current.closest('.ant-card').getBoundingClientRect(),
+          width = _containerRef$current.width;
+
       setShowInput(width > 200);
     };
 
     window.addEventListener('resize', onResize);
     onResize();
-    return () => {
+    return function () {
       window.removeEventListener('resize', onResize);
     };
   });
 
-  const updateQty = value => {
+  var updateQty = function updateQty(value) {
     setQtyToBuy(value);
     updatedQty(value);
   };
 
-  const increaseQty = () => {
+  var increaseQty = function increaseQty() {
     if (qtyToBuy >= 0) {
       updateQty(qtyToBuy + 1);
     }
   };
 
-  const decreaseQty = () => {
+  var decreaseQty = function decreaseQty() {
     if (qtyToBuy > 0) {
       updateQty(qtyToBuy - 1);
     }
   };
 
-  const onInputChange = e => {
-    const {
-      value
-    } = e.target;
-    const regex = /^[0-9]+$/;
+  var onInputChange = function onInputChange(e) {
+    var value = e.target.value;
+    var regex = /^[0-9]+$/;
 
     if (value.match(regex)) {
       updateQty(+value);
@@ -229,7 +325,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-function _objectWithoutPropertiesLoose(source, excluded) {
+function _objectWithoutPropertiesLoose$1(source, excluded) {
   if (source == null) return {};
   var target = {};
   var sourceKeys = Object.keys(source);
@@ -246,7 +342,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var target = _objectWithoutPropertiesLoose$1(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -1983,35 +2079,33 @@ var ShoppingCartOutlined$1 = function ShoppingCartOutlined$1(props, ref) {
 ShoppingCartOutlined$1.displayName = 'ShoppingCartOutlined';
 var ShoppingCartOutlined$2 = /*#__PURE__*/forwardRef(ShoppingCartOutlined$1);
 
-const NotifyMeButton = ({
-  onClick
-}) => /*#__PURE__*/React__default.createElement(StyledNotifyButton, {
-  type: "primary",
-  danger: true,
-  onClick: onClick
-}, /*#__PURE__*/React__default.createElement(BellOutlined$2, null));
+var NotifyMeButton = function NotifyMeButton(_ref) {
+  var onClick = _ref.onClick;
+  return /*#__PURE__*/React__default.createElement(StyledNotifyButton, {
+    type: "primary",
+    danger: true,
+    onClick: onClick
+  }, /*#__PURE__*/React__default.createElement(BellOutlined$2, null));
+};
 
-const NotifyMe = () => {
-  const [email, setEmail] = useState('');
-  const {
-    item: {
-      id
-    },
-    onNotifyClick
-  } = useContext(ProductContext);
+var NotifyMe = function NotifyMe() {
+  var _useState = useState(''),
+      email = _useState[0],
+      setEmail = _useState[1];
 
-  const onInputChange = ({
-    target: {
-      value
-    }
-  }) => {
+  var _useContext = useContext(ProductContext),
+      id = _useContext.item.id,
+      onNotifyClick = _useContext.onNotifyClick;
+
+  var onInputChange = function onInputChange(_ref2) {
+    var value = _ref2.target.value;
     setEmail(value);
   };
 
-  const onNotifyPressed = () => {
+  var onNotifyPressed = function onNotifyPressed() {
     onNotifyClick({
-      email,
-      id
+      email: email,
+      id: id
     });
   };
 
@@ -2022,50 +2116,54 @@ const NotifyMe = () => {
   }));
 };
 
-const AddToCartButton = ({
-  onClick
-}) => /*#__PURE__*/React__default.createElement(Button, {
-  danger: true,
-  type: "primary",
-  onClick: onClick
-}, /*#__PURE__*/React__default.createElement(ShoppingCartOutlined$2, null));
+var AddToCartButton = function AddToCartButton(_ref) {
+  var onClick = _ref.onClick;
+  return /*#__PURE__*/React__default.createElement(Button, {
+    danger: true,
+    type: "primary",
+    onClick: onClick
+  }, /*#__PURE__*/React__default.createElement(ShoppingCartOutlined$2, null));
+};
 
-const LoginView = ({
-  onClick
-}) => /*#__PURE__*/React__default.createElement(StyledLoginView, null, /*#__PURE__*/React__default.createElement(Button, {
-  type: "link",
-  danger: true,
-  onClick: onClick
-}, "Login"), "to view price.");
+var LoginView = function LoginView(_ref) {
+  var onClick = _ref.onClick;
+  return /*#__PURE__*/React__default.createElement(StyledLoginView, null, /*#__PURE__*/React__default.createElement(Button, {
+    type: "link",
+    danger: true,
+    onClick: onClick
+  }, "Login"), "to view price.");
+};
 
-const One = () => {
-  const {
-    item: {
-      price,
-      currency,
-      qty,
-      id
-    },
-    addToCart,
-    showLogin,
-    onLoginClick
-  } = useContext(ProductContext);
-  const [newUpdatedQty, setNewUpdatedQty] = useState(0);
-  const amount = `${currency} ${price}`;
-  const productCount = qty > 50 ? '50+' : qty;
-  const inStockMessage = `In-stock: ${productCount}`;
-  const outOfStock = /*#__PURE__*/React__default.createElement(StyledOutOfStock, null, "Out Of Stock");
-  const isProductOutOfStock = qty === 0;
-  const stockTitle = isProductOutOfStock ? outOfStock : inStockMessage;
+var One = function One() {
+  var _useContext = useContext(ProductContext),
+      _useContext$item = _useContext.item,
+      price = _useContext$item.price,
+      currency = _useContext$item.currency,
+      qty = _useContext$item.qty,
+      id = _useContext$item.id,
+      addToCart = _useContext.addToCart,
+      showLogin = _useContext.showLogin,
+      onLoginClick = _useContext.onLoginClick;
 
-  const handleAddToCart = () => {
+  var _useState = useState(0),
+      newUpdatedQty = _useState[0],
+      setNewUpdatedQty = _useState[1];
+
+  var amount = currency + " " + price;
+  var productCount = qty > 50 ? '50+' : qty;
+  var inStockMessage = "In-stock: " + productCount;
+  var outOfStock = /*#__PURE__*/React__default.createElement(StyledOutOfStock, null, "Out Of Stock");
+  var isProductOutOfStock = qty === 0;
+  var stockTitle = isProductOutOfStock ? outOfStock : inStockMessage;
+
+  var handleAddToCart = function handleAddToCart() {
     addToCart({
-      id,
+      id: id,
       qty: newUpdatedQty
     });
   };
 
-  const renderSubModules = () => {
+  var renderSubModules = function renderSubModules() {
     return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(StyledPrice, null, amount), /*#__PURE__*/React__default.createElement(StyledStockBG, null, stockTitle), isProductOutOfStock && /*#__PURE__*/React__default.createElement(NotifyMe, null), !isProductOutOfStock && /*#__PURE__*/React__default.createElement(AddToCartContainer, null, /*#__PURE__*/React__default.createElement(QtyMeter, {
       updatedQty: setNewUpdatedQty
     }), /*#__PURE__*/React__default.createElement(AddToCartButton, {
@@ -2078,132 +2176,75 @@ const One = () => {
   }) : renderSubModules());
 };
 
-let _$1 = t => t,
-    _t$1;
+function _templateObject$1() {
+  var data = _taggedTemplateLiteralLoose(["\n  text-align: center;\n\n  :hover {\n    ", ";\n\n    .quick-action {\n      display: flex;\n    }\n  }\n\n  .ant-card-cover {\n    ", "\n  }\n\n  .ant-card-body {\n    padding: 15px;\n    padding-top: 0px;\n  }\n\n  .ant-card-meta {\n    margin-bottom: 6px;\n\n    .ant-card-meta-title {\n      white-space: initial;\n      font-size: 14px;\n      ", "\n    }\n\n    .ant-card-meta-description {\n      ", ";\n    }\n  }\n"]);
 
-const imageLayout = ({
-  layout: {
-    image
-  }
-}) => `
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  img {
-    width: ${image.size}%;
-  }
-  margin-bottom: ${image.mb}px;
-`;
+  _templateObject$1 = function _templateObject() {
+    return data;
+  };
 
-const titleLayout = ({
-  layout: {
-    title
-  }
-}) => `
-  margin-bottom: ${title.mb}px;
-  
-  display: -webkit-box;
-  -webkit-line-clamp: ${title.lineCamp};
-  -webkit-box-orient: vertical;
-  
-  height: ${title.lineCamp * 22}px;
-`;
+  return data;
+}
 
-const descriptionLayout = ({
-  layout: {
-    detail
-  }
-}) => `
-  margin-bottom: ${detail.mb}px;
-`;
+var imageLayout = function imageLayout(_ref) {
+  var image = _ref.layout.image;
+  return "\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  \n  img {\n    width: " + image.size + "%;\n  }\n  margin-bottom: " + image.mb + "px;\n";
+};
 
-const boxShadow = () => `
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+var titleLayout = function titleLayout(_ref2) {
+  var title = _ref2.layout.title;
+  return "\n  margin-bottom: " + title.mb + "px;\n  \n  display: -webkit-box;\n  -webkit-line-clamp: " + title.lineCamp + ";\n  -webkit-box-orient: vertical;\n  \n  height: " + title.lineCamp * 22 + "px;\n";
+};
 
-  transition: box-shadow 0.3s ease-in-out;
-`;
+var descriptionLayout = function descriptionLayout(_ref3) {
+  var detail = _ref3.layout.detail;
+  return "\n  margin-bottom: " + detail.mb + "px;\n";
+};
 
-const StyledCardProductContainer = styled(Card)(_t$1 || (_t$1 = _$1`
-  text-align: center;
+var boxShadow = function boxShadow() {
+  return "\n  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),\n    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),\n    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),\n    0 100px 80px rgba(0, 0, 0, 0.12);\n\n  transition: box-shadow 0.3s ease-in-out;\n";
+};
 
-  :hover {
-    ${0};
+var StyledCardProductContainer = styled(Card)(_templateObject$1(), function (_ref4) {
+  var showBoxShadow = _ref4.showBoxShadow;
+  return showBoxShadow && boxShadow();
+}, imageLayout, titleLayout, descriptionLayout);
 
-    .quick-action {
-      display: flex;
-    }
-  }
+var OneQuickAction = function OneQuickAction() {
+  var _useContext = useContext(ProductContext),
+      id = _useContext.item.id,
+      addToCart = _useContext.addToCart;
 
-  .ant-card-cover {
-    ${0}
-  }
-
-  .ant-card-body {
-    padding: 15px;
-    padding-top: 0px;
-  }
-
-  .ant-card-meta {
-    margin-bottom: 6px;
-
-    .ant-card-meta-title {
-      white-space: initial;
-      font-size: 14px;
-      ${0}
-    }
-
-    .ant-card-meta-description {
-      ${0};
-    }
-  }
-`), ({
-  showBoxShadow
-}) => showBoxShadow && boxShadow(), imageLayout, titleLayout, descriptionLayout);
-
-const OneQuickAction = () => {
-  const {
-    item: {
-      id
-    },
-    addToCart
-  } = useContext(ProductContext);
   return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(AddToCartButton, {
-    onClick: () => {
+    onClick: function onClick() {
       addToCart({
-        id
+        id: id
       });
     }
   }));
 };
 
-let _$2 = t => t,
-    _t$2;
-const StyledQuickActions = styled.div(_t$2 || (_t$2 = _$2`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
-  display: none;
-`));
-const QuickAction = props => /*#__PURE__*/React__default.createElement(StyledQuickActions, Object.assign({}, props, {
-  className: "quick-action"
-}), props.children);
+function _templateObject$2() {
+  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  align-items: center;\n  justify-content: center;\n  background: rgba(0, 0, 0, 0.3);\n  display: none;\n"]);
 
-const {
-  Meta
-} = Card;
+  _templateObject$2 = function _templateObject() {
+    return data;
+  };
 
-const noop = () => {};
+  return data;
+}
+var StyledQuickActions = styled.div(_templateObject$2());
+var QuickAction = function QuickAction(props) {
+  return /*#__PURE__*/React__default.createElement(StyledQuickActions, _extends({}, props, {
+    className: "quick-action"
+  }), props.children);
+};
 
-const defaultProps = {
+var Meta = Card.Meta;
+
+var noop = function noop() {};
+
+var defaultProps = {
   addToCart: noop,
   onNotifyClick: noop,
   onLoginClick: noop,
@@ -2211,9 +2252,9 @@ const defaultProps = {
   variant: '',
   showLogin: false
 };
-const ProductContext = React__default.createContext(defaultProps);
+var ProductContext = React__default.createContext(defaultProps);
 
-const getComponent = variant => {
+var getComponent = function getComponent(variant) {
   switch (variant) {
     case 'one':
       return {
@@ -2229,26 +2270,22 @@ const getComponent = variant => {
   }
 };
 
-const Product = props => {
-  const {
-    item: {
-      imgUrl,
-      title,
-      description,
-      qty
-    },
-    colValues,
-    layoutModel,
-    showBoxShadow,
-    showLogin
-  } = props;
-  const c = getComponent(props.variant);
-  let showQuickAction = layoutModel.showQuickActions && !showLogin && qty > 0;
+var Product = function Product(props) {
+  var _props$item = props.item,
+      imgUrl = _props$item.imgUrl,
+      title = _props$item.title,
+      description = _props$item.description,
+      qty = _props$item.qty,
+      colValues = props.colValues,
+      layoutModel = props.layoutModel,
+      showBoxShadow = props.showBoxShadow,
+      showLogin = props.showLogin;
+  var c = getComponent(props.variant);
+  var showQuickAction = layoutModel.showQuickActions && !showLogin && qty > 0;
   return /*#__PURE__*/React__default.createElement(Col, {
     span: colValues
   }, /*#__PURE__*/React__default.createElement(ProductContext.Provider, {
-    value: { ...props
-    }
+    value: _extends({}, props)
   }, /*#__PURE__*/React__default.createElement(StyledCardProductContainer, {
     showBoxShadow: showBoxShadow,
     layout: layoutModel,
@@ -2262,42 +2299,54 @@ const Product = props => {
   }), c.subComponent)));
 };
 
-const noop$1 = () => {};
+var noop$1 = function noop() {};
 
-const getLayoutModel = ({
-  rowSpace: _rowSpace = 8,
-  colSpace: _colSpace = 8,
-  imageSize: _imageSize = 100,
-  imageBottomSpace: _imageBottomSpace = 15,
-  titleBottomSpace: _titleBottomSpace = 10,
-  titleLineClamp: _titleLineClamp = 2,
-  detailBottomSpace: _detailBottomSpace = 0,
-  showBoxShadow: _showBoxShadow = true,
-  showQuickActions: _showQuickActions = false,
-  backgroundColor: _backgroundColor = 'white',
-  variant: _variant = 'one'
-} = {}) => {
+var getLayoutModel = function getLayoutModel(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$rowSpace = _ref.rowSpace,
+      rowSpace = _ref$rowSpace === void 0 ? 8 : _ref$rowSpace,
+      _ref$colSpace = _ref.colSpace,
+      colSpace = _ref$colSpace === void 0 ? 8 : _ref$colSpace,
+      _ref$imageSize = _ref.imageSize,
+      imageSize = _ref$imageSize === void 0 ? 100 : _ref$imageSize,
+      _ref$imageBottomSpace = _ref.imageBottomSpace,
+      imageBottomSpace = _ref$imageBottomSpace === void 0 ? 15 : _ref$imageBottomSpace,
+      _ref$titleBottomSpace = _ref.titleBottomSpace,
+      titleBottomSpace = _ref$titleBottomSpace === void 0 ? 10 : _ref$titleBottomSpace,
+      _ref$titleLineClamp = _ref.titleLineClamp,
+      titleLineClamp = _ref$titleLineClamp === void 0 ? 2 : _ref$titleLineClamp,
+      _ref$detailBottomSpac = _ref.detailBottomSpace,
+      detailBottomSpace = _ref$detailBottomSpac === void 0 ? 0 : _ref$detailBottomSpac,
+      _ref$showBoxShadow = _ref.showBoxShadow,
+      showBoxShadow = _ref$showBoxShadow === void 0 ? true : _ref$showBoxShadow,
+      _ref$showQuickActions = _ref.showQuickActions,
+      showQuickActions = _ref$showQuickActions === void 0 ? false : _ref$showQuickActions,
+      _ref$backgroundColor = _ref.backgroundColor,
+      backgroundColor = _ref$backgroundColor === void 0 ? 'white' : _ref$backgroundColor,
+      _ref$variant = _ref.variant,
+      variant = _ref$variant === void 0 ? 'one' : _ref$variant;
+
   return {
-    rowSpace: _rowSpace,
-    colSpace: _colSpace,
-    showBoxShadow: _showBoxShadow,
-    backgroundColor: _backgroundColor,
-    showQuickActions: _showQuickActions,
-    variant: _variant,
+    rowSpace: rowSpace,
+    colSpace: colSpace,
+    showBoxShadow: showBoxShadow,
+    backgroundColor: backgroundColor,
+    showQuickActions: showQuickActions,
+    variant: variant,
     image: {
-      size: _imageSize,
-      mb: _imageBottomSpace
+      size: imageSize,
+      mb: imageBottomSpace
     },
     title: {
-      lineCamp: _titleLineClamp,
-      mb: _titleBottomSpace
+      lineCamp: titleLineClamp,
+      mb: titleBottomSpace
     },
     detail: {
-      mb: _detailBottomSpace
+      mb: detailBottomSpace
     }
   };
 };
-const defaultProps$1 = {
+var defaultProps$1 = {
   items: [],
   layoutModel: getLayoutModel(),
   colCount: 3,
@@ -2306,34 +2355,38 @@ const defaultProps$1 = {
   addToCart: noop$1
 };
 
-const ProductSlider = (props = {}) => {
-  const newProps = { ...defaultProps$1,
-    ...props
-  };
-  const {
-    colCount,
-    items,
-    ...restProps
-  } = newProps;
-  const {
-    colSpace,
-    rowSpace,
-    showBoxShadow,
-    backgroundColor,
-    variant
-  } = restProps.layoutModel;
-  const commonProps = {
-    variant,
+var ProductSlider = function ProductSlider(props) {
+  if (props === void 0) {
+    props = {};
+  }
+
+  var newProps = _extends({}, defaultProps$1, props);
+
+  var colCount = newProps.colCount,
+      items = newProps.items,
+      restProps = _objectWithoutPropertiesLoose(newProps, ["colCount", "items"]);
+
+  var _restProps$layoutMode = restProps.layoutModel,
+      colSpace = _restProps$layoutMode.colSpace,
+      rowSpace = _restProps$layoutMode.rowSpace,
+      showBoxShadow = _restProps$layoutMode.showBoxShadow,
+      backgroundColor = _restProps$layoutMode.backgroundColor,
+      variant = _restProps$layoutMode.variant;
+
+  var commonProps = _extends({
+    variant: variant,
     colValues: 24 / colCount,
-    showBoxShadow,
-    ...restProps
-  };
-  const products = items.map(item => /*#__PURE__*/createElement(Product, Object.assign({
-    item: item
-  }, commonProps, {
-    key: item.id
-  })));
-  products.push( /*#__PURE__*/createElement(Product, Object.assign({
+    showBoxShadow: showBoxShadow
+  }, restProps);
+
+  var products = items.map(function (item) {
+    return /*#__PURE__*/createElement(Product, _extends({
+      item: item
+    }, commonProps, {
+      key: item.id
+    }));
+  });
+  products.push( /*#__PURE__*/createElement(Product, _extends({
     item: items[0]
   }, commonProps, {
     key: "login"
@@ -2346,7 +2399,7 @@ const ProductSlider = (props = {}) => {
   }, products);
 };
 
-class Breakpoint {}
+var Breakpoint = function Breakpoint() {};
 
 Breakpoint.xs = 'xs';
 Breakpoint.sm = 'sm';
@@ -2356,45 +2409,54 @@ Breakpoint.xl = 'xl';
 Breakpoint.xxl = 'xxl';
 
 function debounce(func, wait, immediate) {
-  let timeout;
-  return function (...args) {
+  var timeout;
+  return function () {
+    var _this = this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
     clearTimeout(timeout);
-    timeout = setTimeout(() => {
+    timeout = setTimeout(function () {
       timeout = null;
-      if (!immediate) func.apply(this, args);
+      if (!immediate) func.apply(_this, args);
     }, wait);
-    if (immediate && !timeout) func.apply(this, [...args]);
+    if (immediate && !timeout) func.apply(this, [].concat(args));
   };
 }
 
 function useWindowSize() {
-  const isWindow = typeof window !== 'undefined';
-  const [windowSize, setWindowSize] = useState({
+  var isWindow = typeof window !== 'undefined';
+
+  var _useState = useState({
     width: isWindow ? window.innerWidth : 1200,
     height: isWindow ? window.innerHeight : 800
-  });
-  useEffect(() => {
-    const onWindowResize = () => {
+  }),
+      windowSize = _useState[0],
+      setWindowSize = _useState[1];
+
+  useEffect(function () {
+    var onWindowResize = function onWindowResize() {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight
       });
     };
 
-    const onResize = debounce(onWindowResize, 100);
+    var onResize = debounce(onWindowResize, 100);
     window.addEventListener('resize', onResize);
     onWindowResize();
-    return () => {
+    return function () {
       window.removeEventListener('resize', onResize);
     };
   }, []);
   return windowSize;
 }
 
-const getBreakpoint = ({
-  width: screen
-}) => {
-  let breakpoint = '';
+var getBreakpoint = function getBreakpoint(_ref) {
+  var screen = _ref.width;
+  var breakpoint = '';
 
   if (screen <= 320) {
     breakpoint = Breakpoint.xs;
@@ -2424,9 +2486,13 @@ const getBreakpoint = ({
 };
 
 function useGridSize() {
-  const windowSize = useWindowSize();
-  const [layout, setLayout] = useState(Breakpoint.md);
-  useEffect(() => {
+  var windowSize = useWindowSize();
+
+  var _useState = useState(Breakpoint.md),
+      layout = _useState[0],
+      setLayout = _useState[1];
+
+  useEffect(function () {
     setLayout(getBreakpoint(windowSize));
   }, [windowSize]);
   return layout;
