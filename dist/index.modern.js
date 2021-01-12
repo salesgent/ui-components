@@ -1,5 +1,4 @@
 import React__default, { useState, useRef, useEffect, forwardRef, createElement, useContext } from 'react';
-import 'antd/dist/antd.css';
 import { Input, Button, Card, Col, Row } from 'antd';
 import styled from 'styled-components';
 
