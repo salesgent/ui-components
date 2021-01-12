@@ -1,5 +1,4 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 import { Card, Col } from 'antd';
 import One from './subComponents/one/one';
 import { StyledCardProductContainer } from './styled/product.styled';

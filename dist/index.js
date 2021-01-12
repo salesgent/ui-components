@@ -2,7 +2,6 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = require('react');
 var React__default = _interopDefault(React);
-require('antd/dist/antd.css');
 var antd = require('antd');
 var styled = _interopDefault(require('styled-components'));
 
