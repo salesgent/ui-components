@@ -2379,18 +2379,13 @@ var ProductSlider = function ProductSlider(props) {
   }, restProps);
 
   var products = items.map(function (item) {
-    return /*#__PURE__*/createElement(Product, _extends({
+    return /*#__PURE__*/React__default.createElement(Product, _extends({
       item: item
     }, commonProps, {
       key: item.id
     }));
   });
-  products.push( /*#__PURE__*/createElement(Product, _extends({
-    item: items[0]
-  }, commonProps, {
-    key: "login"
-  })));
-  return /*#__PURE__*/createElement(Row, {
+  return /*#__PURE__*/React__default.createElement(Row, {
     gutter: [colSpace, rowSpace],
     style: {
       background: backgroundColor
