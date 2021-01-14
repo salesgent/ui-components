@@ -45,6 +45,7 @@ const defaultProps = {
   onLoginClick: noop,
   onNotifyClick: noop,
   addToCart: noop,
+  onProductClick: noop,
 };
 
 const ProductSlider = (props = {}) => {

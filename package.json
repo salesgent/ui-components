@@ -1,6 +1,6 @@
 {
   "name": "@salesgenterp/ui-components",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Made with create-react-library",
   "author": "",
   "license": "MIT",
@@ -22,7 +22,8 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "react": "^16.0.0"
