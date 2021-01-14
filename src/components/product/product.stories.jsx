@@ -36,8 +36,7 @@ const Template = ({ showMoreProducts = false, ...props }) => {
   const onLoginClick = () => {
     alert('login pressed');
   };
-
-  const onProductClick = (item) => console.log(item);
+  const onImageClick = (item) => console.log('on image click', item);
 
   const {
     rowSpace,
@@ -75,7 +74,7 @@ const Template = ({ showMoreProducts = false, ...props }) => {
       addToCart={addToCart}
       onNotifyClick={onNotifyClick}
       onLoginClick={onLoginClick}
-      onProductClick={onProductClick}
+      onImageClick={onImageClick}
     />
   );
 };
