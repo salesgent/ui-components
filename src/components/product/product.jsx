@@ -39,7 +39,7 @@ const Product = (props) => {
     layoutModel,
     showBoxShadow,
     showLogin,
-    onProductClick,
+    onImageClick,
   } = props;
   const c = getComponent(props.variant);
   let showQuickAction = layoutModel.showQuickActions && !showLogin && qty > 0;
@@ -48,13 +48,13 @@ const Product = (props) => {
     <Col span={colValues}>
       <ProductContext.Provider value={{ ...props }}>
         <StyledCardProductContainer
-          onClick={() => onProductClick(item)}
           showBoxShadow={showBoxShadow}
           layout={layoutModel}
           cover={
             <React.Fragment>
               {showQuickAction && <QuickAction>{c.quickAction}</QuickAction>}
               <Image
+                onClick={(e) => onImageClick(item, e)}
                 alt="example"
                 src={imgUrl}
                 fallback={defaultFallbackImageUrl}

@@ -12,7 +12,7 @@ export const OneQuickAction = () => {
     <div>
       <AddToCartButton
         onClick={() => {
-          addToCart({ id });
+          addToCart({ id, qty: 1 });
         }}
       />
     </div>
