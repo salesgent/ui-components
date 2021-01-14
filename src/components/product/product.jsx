@@ -34,10 +34,12 @@ const defaultFallbackImageUrl =
 const Product = (props) => {
   const {
     item: { imgUrl, title, description, qty },
+    item,
     colValues,
     layoutModel,
     showBoxShadow,
     showLogin,
+    onProductClick,
   } = props;
   const c = getComponent(props.variant);
   let showQuickAction = layoutModel.showQuickActions && !showLogin && qty > 0;
@@ -46,6 +48,7 @@ const Product = (props) => {
     <Col span={colValues}>
       <ProductContext.Provider value={{ ...props }}>
         <StyledCardProductContainer
+          onClick={() => onProductClick(item)}
           showBoxShadow={showBoxShadow}
           layout={layoutModel}
           cover={

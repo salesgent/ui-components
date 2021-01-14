@@ -39,6 +39,8 @@ export const StyledCardProductContainer = styled(Card)`
   text-align: center;
 
   :hover {
+    cursor: pointer;
+
     ${({ showBoxShadow }) => showBoxShadow && boxShadow()};
 
     .quick-action {

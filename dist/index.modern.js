@@ -2176,7 +2176,7 @@ var One = function One() {
 };
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose(["\n  text-align: center;\n\n  :hover {\n    ", ";\n\n    .quick-action {\n      display: flex;\n    }\n  }\n\n  .ant-card-cover {\n    ", "\n  }\n\n  .ant-card-body {\n    padding: 15px;\n    padding-top: 0px;\n  }\n\n  .ant-card-meta {\n    margin-bottom: 6px;\n\n    .ant-card-meta-title {\n      white-space: initial;\n      font-size: 14px;\n      ", "\n    }\n\n    .ant-card-meta-description {\n      ", ";\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  text-align: center;\n\n  :hover {\n    cursor: pointer;\n\n    ", ";\n\n    .quick-action {\n      display: flex;\n    }\n  }\n\n  .ant-card-cover {\n    ", "\n  }\n\n  .ant-card-body {\n    padding: 15px;\n    padding-top: 0px;\n  }\n\n  .ant-card-meta {\n    margin-bottom: 6px;\n\n    .ant-card-meta-title {\n      white-space: initial;\n      font-size: 14px;\n      ", "\n    }\n\n    .ant-card-meta-description {\n      ", ";\n    }\n  }\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -2277,10 +2277,12 @@ var Product = function Product(props) {
       title = _props$item.title,
       description = _props$item.description,
       qty = _props$item.qty,
+      item = props.item,
       colValues = props.colValues,
       layoutModel = props.layoutModel,
       showBoxShadow = props.showBoxShadow,
-      showLogin = props.showLogin;
+      showLogin = props.showLogin,
+      onProductClick = props.onProductClick;
   var c = getComponent(props.variant);
   var showQuickAction = layoutModel.showQuickActions && !showLogin && qty > 0;
   return /*#__PURE__*/React__default.createElement(Col, {
@@ -2288,6 +2290,9 @@ var Product = function Product(props) {
   }, /*#__PURE__*/React__default.createElement(ProductContext.Provider, {
     value: _extends({}, props)
   }, /*#__PURE__*/React__default.createElement(StyledCardProductContainer, {
+    onClick: function onClick() {
+      return onProductClick(item);
+    },
     showBoxShadow: showBoxShadow,
     layout: layoutModel,
     cover: /*#__PURE__*/React__default.createElement(React__default.Fragment, null, showQuickAction && /*#__PURE__*/React__default.createElement(QuickAction, null, c.quickAction), /*#__PURE__*/React__default.createElement(Image, {
