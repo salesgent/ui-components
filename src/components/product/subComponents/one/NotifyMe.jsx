@@ -3,6 +3,7 @@ import { ProductContext } from '../../product';
 import { StyledNotifyButton, StyledNotifyMe } from './styled/one.styled';
 import { Input } from 'antd';
 import { BellOutlined } from '@ant-design/icons';
+import { preventOuterClick } from '../../../../utils/commons';
 
 const NotifyMeButton = ({ onClick }) => (
   <StyledNotifyButton type="primary" danger onClick={onClick}>
@@ -20,13 +21,15 @@ const NotifyMe = () => {
   const onInputChange = ({ target: { value } }) => {
     setEmail(value);
   };
-  const onNotifyPressed = () => {
+
+  const onNotifyPressed = (e) => {
+    preventOuterClick(e);
     onNotifyClick({ email, id });
   };
 
   return (
     <StyledNotifyMe>
-      <Input onChange={onInputChange} />
+      <Input onChange={onInputChange} onClick={preventOuterClick} />
       <NotifyMeButton onClick={onNotifyPressed} />
     </StyledNotifyMe>
   );

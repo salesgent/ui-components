@@ -11,6 +11,7 @@ import { ProductContext } from '../../product';
 import NotifyMe from './NotifyMe';
 import { AddToCartButton } from './AddToCartButton';
 import { LoginView } from './LoginView';
+import { preventOuterClick } from '../../../../utils/commons';
 
 const One = () => {
   const {
@@ -28,7 +29,8 @@ const One = () => {
   const isProductOutOfStock = qty === 0;
   const stockTitle = isProductOutOfStock ? outOfStock : inStockMessage;
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e) => {
+    preventOuterClick(e);
     addToCart({
       id,
       qty: newUpdatedQty,
@@ -53,7 +55,16 @@ const One = () => {
 
   return (
     <StyledOne>
-      {showLogin ? <LoginView onClick={onLoginClick} /> : renderSubModules()}
+      {showLogin ? (
+        <LoginView
+          onClick={(e) => {
+            preventOuterClick(e);
+            onLoginClick(e);
+          }}
+        />
+      ) : (
+        renderSubModules()
+      )}
     </StyledOne>
   );
 };
