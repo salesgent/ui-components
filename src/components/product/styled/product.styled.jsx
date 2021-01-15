@@ -52,6 +52,10 @@ export const StyledCardProductContainer = styled(Card)`
     ${imageLayout}
   }
 
+  .ant-image-mask {
+    display: none;
+  }
+
   .ant-card-body {
     padding: 15px;
     padding-top: 0px;
