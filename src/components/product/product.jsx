@@ -4,6 +4,7 @@ import One from './subComponents/one/one';
 import { StyledCardProductContainer } from './styled/product.styled';
 import { OneQuickAction } from '../quickActions/one.quickAction';
 import { QuickAction } from './common/quickAction';
+import { preventOuterClick } from '../../utils/commons';
 
 const { Meta } = Card;
 
@@ -40,6 +41,7 @@ const Product = (props) => {
     showBoxShadow,
     showLogin,
     onImageClick,
+    onProductClick,
   } = props;
   const c = getComponent(props.variant);
   let showQuickAction = layoutModel.showQuickActions && !showLogin && qty > 0;
@@ -48,15 +50,20 @@ const Product = (props) => {
     <Col span={colValues}>
       <ProductContext.Provider value={{ ...props }}>
         <StyledCardProductContainer
+          onClick={(e) => onProductClick(item, e)}
           showBoxShadow={showBoxShadow}
           layout={layoutModel}
           cover={
             <React.Fragment>
               {showQuickAction && <QuickAction>{c.quickAction}</QuickAction>}
               <Image
-                onClick={(e) => onImageClick(item, e)}
+                onClick={(e) => {
+                  preventOuterClick(e);
+                  onImageClick(item, e);
+                }}
+                preview={false}
                 alt="example"
-                src={imgUrl}
+                src={imgUrl ? imgUrl : ''}
                 fallback={defaultFallbackImageUrl}
               />
             </React.Fragment>

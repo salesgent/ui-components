@@ -5,6 +5,7 @@ import {
   StyledProductCounter,
   StyledUpdateQty,
 } from './styled/one.styled';
+import { preventOuterClick } from '../../../../utils/commons';
 
 const ProductCounter = ({ qty }) => {
   const hasQty = qty > 0;
@@ -37,13 +38,17 @@ const QtyMeter = ({ defaultQty = 0, updatedQty }) => {
     updatedQty(value);
   };
 
-  const increaseQty = () => {
+  const increaseQty = (e) => {
+    preventOuterClick(e);
+
     if (qtyToBuy >= 0) {
       updateQty(qtyToBuy + 1);
     }
   };
 
-  const decreaseQty = () => {
+  const decreaseQty = (e) => {
+    preventOuterClick(e);
+
     if (qtyToBuy > 0) {
       updateQty(qtyToBuy - 1);
     }
@@ -62,7 +67,11 @@ const QtyMeter = ({ defaultQty = 0, updatedQty }) => {
     <StyledUpdateQty ref={containerRef}>
       <Button onClick={increaseQty}>+</Button>
       {showInput && (
-        <StyledNumberInput value={qtyToBuy} onChange={onInputChange} />
+        <StyledNumberInput
+          value={qtyToBuy}
+          onChange={onInputChange}
+          onClick={preventOuterClick}
+        />
       )}
       <Button onClick={decreaseQty}>-</Button>
       <ProductCounter qty={qtyToBuy} />
