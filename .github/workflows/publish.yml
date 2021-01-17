@@ -18,6 +18,10 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org
           always-auth: true
+      - name: publish npm
+        run: |
+          npm install
+          npm run build
       - name: 🚀 publish
         run: npm publish --access public
         env:
