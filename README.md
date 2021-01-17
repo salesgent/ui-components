@@ -19,5 +19,4 @@ Note: Contact admin for crendentials.
 
 2. Update package version from `package.json` file.
 3. Run one of the following command to publish the package:
-   - `npm publish`
    - `npm publish --access=public`
