@@ -18,10 +18,10 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org
           always-auth: true
-      - name: publish install dependencies
+      - name: install dependencies
         run: |
           yarn install
-      - name: 🚀 publish
+      - name: 🚀 publish package to npm
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
