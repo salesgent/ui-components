@@ -7,7 +7,7 @@ import { ProductContext } from '../../product';
 import { preventOuterClick } from '../../../../utils/commons';
 
 const StyledTwo = styled.div`
-  min-height: 50px;
+  min-height: 60px;
 `;
 const StyledPrice = styled.div``;
 const StyledOutOfStock = styled.div``;
