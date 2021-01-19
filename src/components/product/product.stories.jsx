@@ -4,7 +4,8 @@ import { products, productsForSliders } from '../__mocks__/products';
 import ProductSlider, { getLayoutModel } from '../productSlider/productSlider';
 import { useGridSize } from '../../hooks';
 import ProductHelper from './utils/ProductHelper';
-
+// import 'antd/dist/antd.css';
+import { Variant } from '../../constants';
 const productHelper = new ProductHelper();
 
 const Template = ({ showMoreProducts = false, ...props }) => {
@@ -81,17 +82,22 @@ const Template = ({ showMoreProducts = false, ...props }) => {
   );
 };
 
-export const Basic = Template.bind({});
-Basic.args = {};
+export const WithVariantOne = Template.bind({});
+WithVariantOne.args = {};
+
+export const WithVariantTwo = WithVariantOne.bind({});
+WithVariantTwo.args = {
+  variant: Variant.TWO,
+};
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: 'Molecules/ProductSlider/one',
+  title: 'Molecules/ProductSlider',
   component: Product,
   argTypes: {
     variant: {
       defaultValue: 'one',
-      control: { type: 'select', options: ['none', 'one'] },
+      control: { type: 'select', options: ['none', 'one', 'two'] },
     },
     colCount: {
       defaultValue: 3,
