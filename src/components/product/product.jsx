@@ -1,10 +1,12 @@
 import React from 'react';
 import { Card, Col, Image } from 'antd';
 import One from './subComponents/one/one';
+import Two from './subComponents/two/two';
 import { StyledCardProductContainer } from './styled/product.styled';
 import { OneQuickAction } from '../quickActions/one.quickAction';
 import { QuickAction } from './common/quickAction';
 import { preventOuterClick } from '../../utils/commons';
+import { Variant } from '../../constants';
 
 const { Meta } = Card;
 
@@ -22,8 +24,10 @@ export const ProductContext = React.createContext(defaultProps);
 
 const getComponent = (variant) => {
   switch (variant) {
-    case 'one':
+    case Variant.ONE:
       return { quickAction: <OneQuickAction />, subComponent: <One /> };
+    case Variant.TWO:
+      return { quickAction: <div></div>, subComponent: <Two /> };
     default:
       return { quickAction: '', subComponent: '' };
   }
