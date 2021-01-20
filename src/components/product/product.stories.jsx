@@ -90,6 +90,11 @@ WithVariantTwo.args = {
   variant: Variant.TWO,
 };
 
+export const WithVariantThree = WithVariantOne.bind({});
+WithVariantThree.args = {
+  variant: Variant.THREE,
+};
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: 'Molecules/ProductSlider',
