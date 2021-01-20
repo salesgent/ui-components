@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Col, Image } from 'antd';
 import One from './subComponents/one/one';
 import Two from './subComponents/two/two';
+import Three from './subComponents/three/three';
 import { StyledCardProductContainer } from './styled/product.styled';
 import { OneQuickAction } from '../quickActions/one.quickAction';
 import { QuickAction } from './common/quickAction';
@@ -28,6 +29,9 @@ const getComponent = (variant) => {
       return { quickAction: <OneQuickAction />, subComponent: <One /> };
     case Variant.TWO:
       return { quickAction: <div></div>, subComponent: <Two /> };
+    case Variant.THREE:
+      return { quickAction: <div></div>, subComponent: <Three /> };
+
     default:
       return { quickAction: '', subComponent: '' };
   }
