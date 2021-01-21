@@ -102,7 +102,7 @@ export default {
   argTypes: {
     variant: {
       defaultValue: 'one',
-      control: { type: 'select', options: ['none', 'one', 'two'] },
+      control: { type: 'select', options: ['none', 'one', 'two', 'three'] },
     },
     colCount: {
       defaultValue: 3,
