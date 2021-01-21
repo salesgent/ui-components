@@ -28,9 +28,9 @@ const getComponent = (variant) => {
     case Variant.ONE:
       return { quickAction: <OneQuickAction />, subComponent: <One /> };
     case Variant.TWO:
-      return { quickAction: <div></div>, subComponent: <Two /> };
+      return { quickAction: <OneQuickAction />, subComponent: <Two /> };
     case Variant.THREE:
-      return { quickAction: <div></div>, subComponent: <Three /> };
+      return { quickAction: <OneQuickAction />, subComponent: <Three /> };
 
     default:
       return { quickAction: '', subComponent: '' };

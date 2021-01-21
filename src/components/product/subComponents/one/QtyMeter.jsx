@@ -64,18 +64,24 @@ const QtyMeter = ({ defaultQty = 0, updatedQty }) => {
   };
 
   return (
-    <StyledUpdateQty ref={containerRef}>
-      <Button onClick={increaseQty}>+</Button>
-      {showInput && (
-        <StyledNumberInput
-          value={qtyToBuy}
-          onChange={onInputChange}
-          onClick={preventOuterClick}
-        />
-      )}
-      <Button onClick={decreaseQty}>-</Button>
+    <>
       <ProductCounter qty={qtyToBuy} />
-    </StyledUpdateQty>
+      <StyledUpdateQty ref={containerRef} className="qty-container">
+        <Button onClick={increaseQty} className="increment">
+          +
+        </Button>
+        {showInput && (
+          <StyledNumberInput
+            value={qtyToBuy}
+            onChange={onInputChange}
+            onClick={preventOuterClick}
+          />
+        )}
+        <Button onClick={decreaseQty} className="decrement">
+          -
+        </Button>
+      </StyledUpdateQty>
+    </>
   );
 };
 
