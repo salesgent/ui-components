@@ -7,6 +7,12 @@ const buttonColor = (theme) => {
  `;
 };
 
+const buttonSVGStyles = (theme) => `
+  svg {
+    fill: ${theme.colors.white}
+  }  
+`;
+
 export const primaryButtonStyle = ({ theme }) => `
     ${buttonColor(theme)}
 
@@ -15,4 +21,6 @@ export const primaryButtonStyle = ({ theme }) => `
     &:active {
       ${buttonColor(theme)}
     }
+    
+    ${buttonSVGStyles(theme)}
 `;
