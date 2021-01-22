@@ -12,8 +12,8 @@ const ProductCounter = ({ qty }) => {
   return hasQty && <StyledProductCounter>{qty}</StyledProductCounter>;
 };
 
-const QtyMeter = ({ defaultQty = 0, updatedQty }) => {
-  const [qtyToBuy, setQtyToBuy] = useState(defaultQty);
+const QtyMeter = ({ updatedQty }) => {
+  const [qtyToBuy, setQtyToBuy] = useState(0);
   const [showInput, setShowInput] = useState(true);
   const containerRef = useRef(null);
 
