@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 
 import { Button } from 'antd';
@@ -63,12 +63,17 @@ function Three() {
     item: { price, currency, qty, id },
     addToCart,
   } = useContext(ProductContext);
+  const [newUpdatedQty, setNewUpdatedQty] = useState(0);
+
   const amount = `${currency} ${price}`;
   const isProductOutOfStock = qty === 0;
 
   const onAddToCartClick = (e) => {
     preventOuterClick(e);
-    addToCart({ id, qty: 1 });
+    addToCart({
+      id,
+      qty: newUpdatedQty,
+    });
   };
 
   return (
@@ -77,7 +82,7 @@ function Three() {
         <StyledPriceQtyContainer>
           <StyledPrice>{amount}</StyledPrice>
           <StyledQty>
-            <QtyMeter />
+            <QtyMeter updatedQty={setNewUpdatedQty} />
           </StyledQty>
         </StyledPriceQtyContainer>
       )}
