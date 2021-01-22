@@ -6,7 +6,7 @@ import { BellOutlined } from '@ant-design/icons';
 import { preventOuterClick } from '../../../../utils/commons';
 
 const NotifyMeButton = ({ onClick }) => (
-  <StyledNotifyButton type="primary" danger onClick={onClick}>
+  <StyledNotifyButton onClick={onClick}>
     <BellOutlined />
   </StyledNotifyButton>
 );

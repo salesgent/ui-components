@@ -5,14 +5,17 @@ import { Button } from 'antd';
 import styled from 'styled-components';
 import { ProductContext } from '../../product';
 import { preventOuterClick } from '../../../../utils/commons';
+import { primaryButtonStyle } from '../../../../styles/buttons';
 
 const StyledTwo = styled.div`
   min-height: 60px;
 `;
+
 const StyledPrice = styled.div`
   font-size: 20px;
   margin-bottom: 10px;
 `;
+
 const StyledOutOfStock = styled.div`
   height: 35px;
   text-transform: uppercase;
@@ -22,24 +25,10 @@ const StyledOutOfStock = styled.div`
   justify-content: center;
 `;
 
-const buttonColor = () => {
-  const color = 'rgb(84, 176, 22)';
-
-  return `
-  border-color: ${color};
-  background: ${color};
- `;
-};
-
 const StyledAddToCartButton = styled(Button)`
   height: 35px;
-  ${buttonColor}
 
-  &:hover,
-  &:focus,
-  &:active {
-    ${buttonColor}
-  }
+  ${primaryButtonStyle}
 `;
 
 function Two() {
