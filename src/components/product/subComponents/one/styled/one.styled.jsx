@@ -1,6 +1,7 @@
 import { Button, Input } from 'antd';
 import styled from 'styled-components';
 import { primaryButtonStyle } from '../../../../../styles/buttons';
+import { labelPrimaryStyle } from '../../../../../styles/label';
 
 export const StyledOne = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ export const StyledOne = styled.div`
 `;
 
 export const StyledPrice = styled.div`
-  color: red;
+  ${labelPrimaryStyle};
   font-weight: bold;
 `;
 export const StyledOutOfStock = styled.div`
