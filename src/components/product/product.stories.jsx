@@ -6,6 +6,7 @@ import { useGridSize } from '../../hooks';
 import ProductHelper from './utils/ProductHelper';
 // import 'antd/dist/antd.css';
 import { Variant } from '../../constants';
+import theme from '../../styles/theme';
 const productHelper = new ProductHelper();
 
 const Template = ({ showMoreProducts = false, ...props }) => {
@@ -51,6 +52,7 @@ const Template = ({ showMoreProducts = false, ...props }) => {
     showBoxShadow,
     showQuickActions,
     backgroundColor,
+    primaryColor,
     ...restProps
   } = props;
 
@@ -67,8 +69,10 @@ const Template = ({ showMoreProducts = false, ...props }) => {
     backgroundColor,
   });
 
+  const newTheme = { colors: { primary: primaryColor } };
   return (
     <ProductSlider
+      theme={newTheme}
       items={showMoreProducts ? productsForSliders : products}
       {...restProps}
       layoutModel={layoutModel}
@@ -100,6 +104,10 @@ export default {
   title: 'Molecules/ProductSlider',
   component: Product,
   argTypes: {
+    primaryColor: {
+      control: 'color',
+      defaultValue: theme.colors.primary,
+    },
     variant: {
       defaultValue: 'one',
       control: { type: 'select', options: ['none', 'one', 'two', 'three'] },
