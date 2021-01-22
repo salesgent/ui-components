@@ -1,5 +1,6 @@
 import { Button, Input } from 'antd';
 import styled from 'styled-components';
+import { primaryButtonStyle } from '../../../../../styles/buttons';
 
 export const StyledOne = styled.div`
   display: flex;
@@ -53,6 +54,8 @@ export const AddToCartContainer = styled(StyledFlex)``;
 export const StyledNotifyMe = styled(StyledFlex)``;
 export const StyledNotifyButton = styled(Button)`
   margin-left: 15px;
+  color: white;
+  ${primaryButtonStyle};
 `;
 
 export const StyledProductCounter = styled.div`

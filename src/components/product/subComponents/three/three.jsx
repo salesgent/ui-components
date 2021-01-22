@@ -8,15 +8,19 @@ import { preventOuterClick } from '../../../../utils/commons';
 import NotifyMe from '../one/NotifyMe';
 import { StyledFlex } from '../one/styled/one.styled';
 import QtyMeter from '../one/QtyMeter';
+import { labelPrimaryStyle } from '../../../../styles/label';
+import { primaryButtonStyle } from '../../../../styles/buttons';
 
 const StyledThree = styled.div``;
 
 const StyledPrice = styled.div`
   font-weight: bold;
+  ${labelPrimaryStyle};
 `;
 
 const StyledAddToCartButton = styled(Button)`
   width: 100%;
+  ${primaryButtonStyle};
 `;
 
 const StyledPriceQtyContainer = styled(StyledFlex)`

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Row } from 'antd';
 import Product from '../product/product';
+import { ThemeProvider } from 'styled-components';
+import defaultTheme from '../../styles/theme';
 
 const noop = () => {};
 
@@ -51,7 +53,7 @@ const defaultProps = {
 
 const ProductSlider = (props = {}) => {
   const newProps = { ...defaultProps, ...props };
-  const { colCount, items, ...restProps } = newProps;
+  const { colCount, items, theme, ...restProps } = newProps;
 
   const {
     colSpace,
@@ -72,10 +74,20 @@ const ProductSlider = (props = {}) => {
     <Product item={item} {...commonProps} key={item.id} />
   ));
 
+  const newTheme = {
+    ...defaultTheme,
+    colors: { ...defaultTheme.colors, ...theme.colors },
+  };
+
   return (
-    <Row gutter={[colSpace, rowSpace]} style={{ background: backgroundColor }}>
-      {products}
-    </Row>
+    <ThemeProvider theme={newTheme}>
+      <Row
+        gutter={[colSpace, rowSpace]}
+        style={{ background: backgroundColor }}
+      >
+        {products}
+      </Row>
+    </ThemeProvider>
   );
 };
 
