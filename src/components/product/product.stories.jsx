@@ -131,6 +131,7 @@ export default {
     },
     backgroundColor: { control: 'color', defaultValue: '#FFFFFF' },
     showMoreProducts: {
+      description: 'This field is only for the storybook example',
       defaultValue: false,
       control: { type: 'boolean' },
     },
