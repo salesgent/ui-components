@@ -59,8 +59,8 @@ const Product = (props) => {
       <ProductContext.Provider value={{ ...props }}>
         <StyledCardProductContainer
           onClick={(e) => onProductClick(item, e)}
-          showBoxShadow={showBoxShadow}
           layout={layoutModel}
+          hoverable={showBoxShadow}
           cover={
             <React.Fragment>
               {showQuickAction && <QuickAction>{c.quickAction}</QuickAction>}
