@@ -27,20 +27,6 @@ const Template = ({ showMoreProducts = false, ...props }) => {
     componentInitialized.current = true;
   }, [props.colCount]);
 
-  const addToCart = (product) => {
-    console.log('add to cart called', product);
-  };
-
-  const onNotifyClick = (data) => {
-    console.log('nofify', data);
-  };
-
-  const onLoginClick = () => {
-    alert('login pressed');
-  };
-  const onImageClick = (item) => console.log('on image click', item);
-  const onProductClick = (item) => console.log('on item click', item);
-
   const {
     rowSpace,
     colSpace,
@@ -77,11 +63,6 @@ const Template = ({ showMoreProducts = false, ...props }) => {
       {...restProps}
       layoutModel={layoutModel}
       colCount={listToShow}
-      addToCart={addToCart}
-      onNotifyClick={onNotifyClick}
-      onLoginClick={onLoginClick}
-      onImageClick={onImageClick}
-      onProductClick={onProductClick}
     />
   );
 };
@@ -165,5 +146,10 @@ export default {
       defaultValue: false,
       control: { type: 'boolean' },
     },
+    onImageClick: { action: 'onImageClick' },
+    onLoginClick: { action: 'onLoginClick' },
+    onNotifyClick: { action: 'onNotifyClick' },
+    onProductClick: { action: 'onProductClick' },
+    addToCart: { action: 'addToCart' },
   },
 };
