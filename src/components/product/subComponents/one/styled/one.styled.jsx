@@ -18,7 +18,7 @@ export const StyledPrice = styled.div`
   font-weight: bold;
 `;
 export const StyledOutOfStock = styled.div`
-  color: red;
+  ${labelPrimaryStyle};
   font-weight: 500;
 `;
 
@@ -60,7 +60,7 @@ export const StyledNotifyButton = styled(Button)`
 `;
 
 export const StyledProductCounter = styled.div`
-  background: red;
+  background: ${({ theme }) => theme.colors.primary};
   height: 30px;
   width: 30px;
 
