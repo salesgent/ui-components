@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Button } from 'antd';
 import {
   StyledNumberInput,
@@ -6,6 +6,7 @@ import {
   StyledUpdateQty,
 } from './styled/one.styled';
 import { preventOuterClick } from '../../../../utils/commons';
+import { ProductContext } from '../../product';
 
 const ProductCounter = ({ qty }) => {
   const hasQty = qty > 0;
@@ -16,6 +17,9 @@ const QtyMeter = ({ updatedQty }) => {
   const [qtyToBuy, setQtyToBuy] = useState(0);
   const [showInput, setShowInput] = useState(true);
   const containerRef = useRef(null);
+  const {
+    item: { qty: totalQty },
+  } = useContext(ProductContext);
 
   useEffect(() => {
     const onResize = () => {
@@ -41,7 +45,7 @@ const QtyMeter = ({ updatedQty }) => {
   const increaseQty = (e) => {
     preventOuterClick(e);
 
-    if (qtyToBuy >= 0) {
+    if (qtyToBuy >= 0 && qtyToBuy < totalQty) {
       updateQty(qtyToBuy + 1);
     }
   };
