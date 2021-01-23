@@ -48,7 +48,7 @@ export const StyledCardProductContainer = styled(Card)`
     }
   }
 
-  .ant-card-cover {
+  .ant-card-cover .ant-image {
     ${imageLayout}
   }
 
